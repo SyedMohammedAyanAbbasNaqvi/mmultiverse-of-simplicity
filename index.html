@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapp">
+
+        <div class="content">
+
+            <h1 class="title">Tme multiverse of<span><span class="stroke">simplicity....</span></span></h1>
+            <div class="card">
+
+                <div class="card__item card__move">
+                    <div class="card__b1">
+                        <img src="1.jpg" alt="1" class="card__img">
+                    </div>
+                    <div class="card__b1 card__clip">
+                        <img src="2.jpg" alt="2" class="card__img">
+                    </div>
+                    <span class="card__txt">hover<span>me</span></span>
+                </div>
+
+                <div class="card__item card__move">
+                    <div class="card__b1">
+                        <img src="3.jpg" alt="3" class="card__img">
+                    </div>
+                    <div class="card__b1 card__clip">
+                        <img src="4.jpg" alt="4" class="card__img">
+                    </div>
+                    <span class="card__txt">hover<span>me</span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        //mouse move
+        function mouseMove() {
+            $('.card__move').each(function () {
+                $(this).on("mousemove", function (e) {
+                    let x= e.offsetX;
+                    let y= e.offsetY;
+
+                    $(this).children('.card__clip').css('clip-path', 'circle(150px at ' + x + 'px ' + y + 'px)');
+                });
+            });
+        };
+        mouseMove();
+    </script>
+
+</body>
+</html>
+
+
+
+
